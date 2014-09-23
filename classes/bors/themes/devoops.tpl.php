@@ -6,15 +6,15 @@
 		<meta name="description" content="description">
 		<meta name="author" content="DevOOPS">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href="plugins/bootstrap/bootstrap.css" rel="stylesheet">
-		<link href="plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet">
-		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-		<link href='http://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
-		<link href="plugins/fancybox/jquery.fancybox.css" rel="stylesheet">
-		<link href="plugins/fullcalendar/fullcalendar.css" rel="stylesheet">
-		<link href="plugins/xcharts/xcharts.min.css" rel="stylesheet">
-		<link href="plugins/select2/select2.css" rel="stylesheet">
-		<link href="css/style.css" rel="stylesheet">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link href="/_bors-assets/vendor/balancer/bors-3rd-themes-bootstrap-devoops/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+		<link href='//fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
+<!--		<link href="/_bors-assets/vendor/balancer/bors-3rd-themes-bootstrap-devoops/plugins/fancybox/jquery.fancybox.css" rel="stylesheet"> -->
+<!--		<link href="/_bors-assets/vendor/balancer/bors-3rd-themes-bootstrap-devoops/plugins/fullcalendar/fullcalendar.css" rel="stylesheet"> -->
+<!--		<link href="/_bors-assets/vendor/balancer/bors-3rd-themes-bootstrap-devoops/plugins/xcharts/xcharts.min.css" rel="stylesheet"> -->
+<!--		<link href="/_bors-assets/vendor/balancer/bors-3rd-themes-bootstrap-devoops/plugins/select2/select2.css" rel="stylesheet"> -->
+		<link href="/_bors-assets/vendor/balancer/bors-3rd-themes-bootstrap-devoops/css/style.min.css" rel="stylesheet">
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
 				<script src="http://getbootstrap.com/docs-assets/js/html5shiv.js"></script>
@@ -323,17 +323,14 @@
 		<!--End Content-->
 	</div>
 </div>
-<!--End Container-->
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<!--<script src="http://code.jquery.com/jquery.js"></script>-->
-<script src="plugins/jquery/jquery-2.1.0.min.js"></script>
-<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="plugins/bootstrap/bootstrap.min.js"></script>
-<script src="plugins/justified-gallery/jquery.justifiedgallery.min.js"></script>
-<script src="plugins/tinymce/tinymce.min.js"></script>
-<script src="plugins/tinymce/jquery.tinymce.min.js"></script>
-<!-- All functions for this theme + document.ready processing -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="/_bors-assets/vendor/balancer/bors-3rd-themes-bootstrap-devoops/plugins/jquery-ui/jquery-ui.min.js"></script>
+
+<script src="/_bors-assets/vendor/balancer/bors-3rd-themes-bootstrap-devoops/plugins/bootstrap/bootstrap.min.js"></script>
+<script src="/_bors-assets/vendor/balancer/bors-3rd-themes-bootstrap-devoops/plugins/justified-gallery/jquery.justifiedgallery.min.js"></script>
+<script src="/_bors-assets/vendor/balancer/bors-3rd-themes-bootstrap-devoops/plugins/tinymce/tinymce.min.js"></script>
+<script src="/_bors-assets/vendor/balancer/bors-3rd-themes-bootstrap-devoops/plugins/tinymce/jquery.tinymce.min.js"></script>
+
 <script src="js/devoops.js"></script>
 </body>
 </html>
