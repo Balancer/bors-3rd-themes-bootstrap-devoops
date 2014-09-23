@@ -9,4 +9,3 @@ DevOOPS Bootstrap 3 theme support for BORS© Framework.
 ```
 composer require balancer/bors-3rd-themes-bootstrap-devoops=*
 ```
-
