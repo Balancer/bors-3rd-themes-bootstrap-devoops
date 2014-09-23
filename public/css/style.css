@@ -26,7 +26,7 @@ h1, .h1, h2, .h2, h3, .h3 {
   display: block;
   font-size: 20px;
   line-height: 50px;
-/*  background: url(../img/logo.png) right 42px no-repeat; */
+  background: url(../img/logo.png) right 42px no-repeat;
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
   -o-transition: 0.5s;
@@ -506,11 +506,10 @@ table.no-border-bottom tr:last-child td {
 .table-datatable tbody td {
   vertical-align: middle !important;
 }
-.table-datatable tbody tr td > img {
-  margin-right: 8px;
-  border: 4px solid #fff;
-  box-shadow: 0 0 4px rgba(0,0,0,0.3);
-/*  width: 40px; */
+.table-datatable img {
+  margin-right: 10px;
+  border: 1px solid #F8F8F8;
+  width: 40px;
 }
 .table-datatable .sorting {
   background:url(../img/sort.png) right center no-repeat;
@@ -1031,7 +1030,7 @@ td.beauty-hover {
   color: #d44950;
 }
 .radio, .checkbox, .radio-inline, .checkbox-inline {
-  position: relative;
+  position: relative; padding-left: 20px;
 }
 .radio label, .checkbox label, .radio-inline label, .checkbox-inline label {
   font-weight: normal;
@@ -1614,38 +1613,6 @@ td.beauty-hover {
 }
 #simple_gallery a.fancybox img:hover {
   box-shadow: 0 0 10px #C7C7C7;
-}
-.justifiedGallery {
-  overflow: hidden;
-  width: 100%;
-}
-.jg-row {
-  position: relative;
-  white-space: nowrap;
-}
-.justifiedGallery .jg-image {
-  position: absolute;
-  display: inline-block;
-  vertical-align: top;
-  margin-left: 0;
-}
-.justifiedGallery .jg-image a {
-  text-decoration: none;
-}
-.justifiedGallery .jg-image img {
-  border: none;
-}
-.justifiedGallery .jg-image-label {
-  white-space: normal;
-  font: normal 12px arial;
-  background: #000;
-  color: #fff;
-  position: absolute;
-  left: 0;
-  right: 0;
-  padding: 5px 5px 10px 8px;
-  text-align: left;
-  opacity: 0;
 }
 .ex-tooltip {
   position: absolute;
