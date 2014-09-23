@@ -327,10 +327,10 @@
 <script src="/_bors-assets/vendor/balancer/bors-3rd-themes-bootstrap-devoops/plugins/jquery-ui/jquery-ui.min.js"></script>
 
 <script src="/_bors-assets/vendor/balancer/bors-3rd-themes-bootstrap-devoops/plugins/bootstrap/bootstrap.min.js"></script>
-<script src="/_bors-assets/vendor/balancer/bors-3rd-themes-bootstrap-devoops/plugins/justified-gallery/jquery.justifiedgallery.min.js"></script>
-<script src="/_bors-assets/vendor/balancer/bors-3rd-themes-bootstrap-devoops/plugins/tinymce/tinymce.min.js"></script>
-<script src="/_bors-assets/vendor/balancer/bors-3rd-themes-bootstrap-devoops/plugins/tinymce/jquery.tinymce.min.js"></script>
+<!-- <script src="/_bors-assets/vendor/balancer/bors-3rd-themes-bootstrap-devoops/plugins/justified-gallery/jquery.justifiedgallery.min.js"></script> -->
+<!-- <script src="/_bors-assets/vendor/balancer/bors-3rd-themes-bootstrap-devoops/plugins/tinymce/tinymce.min.js"></script> -->
+<!-- <script src="/_bors-assets/vendor/balancer/bors-3rd-themes-bootstrap-devoops/plugins/tinymce/jquery.tinymce.min.js"></script> -->
 
-<script src="js/devoops.js"></script>
+<!-- <script src="js/devoops.js"></script> -->
 </body>
 </html>
