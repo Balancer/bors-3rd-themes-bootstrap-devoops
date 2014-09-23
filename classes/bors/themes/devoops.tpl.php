@@ -1,3 +1,7 @@
+<?php
+	use HtmlObject\Element;
+	use HtmlObject\Link;
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -8,13 +12,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 		<link href="/_bors-assets/vendor/balancer/bors-3rd-themes-bootstrap-devoops/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet">
-		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet">
 		<link href='//fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
 <!--		<link href="/_bors-assets/vendor/balancer/bors-3rd-themes-bootstrap-devoops/plugins/fancybox/jquery.fancybox.css" rel="stylesheet"> -->
 <!--		<link href="/_bors-assets/vendor/balancer/bors-3rd-themes-bootstrap-devoops/plugins/fullcalendar/fullcalendar.css" rel="stylesheet"> -->
 <!--		<link href="/_bors-assets/vendor/balancer/bors-3rd-themes-bootstrap-devoops/plugins/xcharts/xcharts.min.css" rel="stylesheet"> -->
 <!--		<link href="/_bors-assets/vendor/balancer/bors-3rd-themes-bootstrap-devoops/plugins/select2/select2.css" rel="stylesheet"> -->
-		<link href="/_bors-assets/vendor/balancer/bors-3rd-themes-bootstrap-devoops/css/style.min.css" rel="stylesheet">
+		<link href="/_bors-assets/vendor/balancer/bors-3rd-themes-bootstrap-devoops/css/style.css" rel="stylesheet">
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
 				<script src="http://getbootstrap.com/docs-assets/js/html5shiv.js"></script>
@@ -49,7 +53,9 @@
 	<div class="container-fluid expanded-panel">
 		<div class="row">
 			<div id="logo" class="col-xs-12 col-sm-2">
-				<a href="index.html">DevOOPS</a>
+<?php
+	echo Link::create($self->project()->url(), $self->project()->title());
+?>
 			</div>
 			<div id="top-panel" class="col-xs-12 col-sm-10">
 				<div class="row">
@@ -85,12 +91,12 @@
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle account" data-toggle="dropdown">
 									<div class="avatar">
-										<img src="img/avatar.jpg" class="img-rounded" alt="avatar" />
+										<imgx src="img/avatar.jpg" class="img-rounded" alt="avatar" />
 									</div>
 									<i class="fa fa-angle-down pull-right"></i>
 									<div class="user-mini pull-right">
 										<span class="welcome">Welcome,</span>
-										<span>Jane Devoops</span>
+										<span><?= htmlspecialchars(bors()->user()->title()); ?></span>
 									</div>
 								</a>
 								<ul class="dropdown-menu">
@@ -145,180 +151,132 @@
 	<div class="row">
 		<div id="sidebar-left" class="col-xs-2 col-sm-2">
 			<ul class="nav main-menu">
-				<li>
-					<a href="ajax/dashboard.html" class="active ajax-link">
-						<i class="fa fa-dashboard"></i>
-						<span class="hidden-xs">Dashboard</span>
-					</a>
-				</li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle">
-						<i class="fa fa-bar-chart-o"></i>
-						<span class="hidden-xs">Charts</span>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a class="ajax-link" href="ajax/charts_xcharts.html">xCharts</a></li>
-						<li><a class="ajax-link" href="ajax/charts_flot.html">Flot Charts</a></li>
-						<li><a class="ajax-link" href="ajax/charts_google.html">Google Charts</a></li>
-						<li><a class="ajax-link" href="ajax/charts_morris.html">Morris Charts</a></li>
-						<li><a class="ajax-link" href="ajax/charts_coindesk.html">CoinDesk realtime</a></li>
-					</ul>
-				</li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle">
-						<i class="fa fa-table"></i>
-						 <span class="hidden-xs">Tables</span>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a class="ajax-link" href="ajax/tables_simple.html">Simple Tables</a></li>
-						<li><a class="ajax-link" href="ajax/tables_datatables.html">Data Tables</a></li>
-						<li><a class="ajax-link" href="ajax/tables_beauty.html">Beauty Tables</a></li>
-					</ul>
-				</li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle">
-						<i class="fa fa-pencil-square-o"></i>
-						 <span class="hidden-xs">Forms</span>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a class="ajax-link" href="ajax/forms_elements.html">Elements</a></li>
-						<li><a class="ajax-link" href="ajax/forms_layouts.html">Layouts</a></li>
-						<li><a class="ajax-link" href="ajax/forms_file_uploader.html">File Uploader</a></li>
-					</ul>
-				</li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle">
-						<i class="fa fa-desktop"></i>
-						 <span class="hidden-xs">UI Elements</span>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a class="ajax-link" href="ajax/ui_grid.html">Grid</a></li>
-						<li><a class="ajax-link" href="ajax/ui_buttons.html">Buttons</a></li>
-						<li><a class="ajax-link" href="ajax/ui_progressbars.html">Progress Bars</a></li>
-						<li><a class="ajax-link" href="ajax/ui_jquery-ui.html">Jquery UI</a></li>
-						<li><a class="ajax-link" href="ajax/ui_icons.html">Icons</a></li>
-					</ul>
-				</li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle">
-						<i class="fa fa-list"></i>
-						 <span class="hidden-xs">Pages</span>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a href="ajax/page_login.html">Login</a></li>
-						<li><a href="ajax/page_register.html">Register</a></li>
-						<li><a id="locked-screen" class="submenu" href="ajax/page_locked.html">Locked Screen</a></li>
-						<li><a class="ajax-link" href="ajax/page_contacts.html">Contacts</a></li>
-						<li><a class="ajax-link" href="ajax/page_feed.html">Feed</a></li>
-						<li><a class="ajax-link add-full" href="ajax/page_messages.html">Messages</a></li>
-						<li><a class="ajax-link" href="ajax/page_pricing.html">Pricing</a></li>
-						<li><a class="ajax-link" href="ajax/page_invoice.html">Invoice</a></li>
-						<li><a class="ajax-link" href="ajax/page_search.html">Search Results</a></li>
-						<li><a class="ajax-link" href="ajax/page_404.html">Error 404</a></li>
-						<li><a href="ajax/page_500.html">Error 500</a></li>
-					</ul>
-				</li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle">
-						<i class="fa fa-map-marker"></i>
-						<span class="hidden-xs">Maps</span>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a class="ajax-link" href="ajax/maps.html">OpenStreetMap</a></li>
-						<li><a class="ajax-link" href="ajax/map_fullscreen.html">Fullscreen map</a></li>
-					</ul>
-				</li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle">
-						<i class="fa fa-picture-o"></i>
-						 <span class="hidden-xs">Gallery</span>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a class="ajax-link" href="ajax/gallery_simple.html">Simple Gallery</a></li>
-						<li><a class="ajax-link" href="ajax/gallery_flickr.html">Flickr Gallery</a></li>
-					</ul>
-				</li>
-				<li>
-					 <a class="ajax-link" href="ajax/typography.html">
-						 <i class="fa fa-font"></i>
-						 <span class="hidden-xs">Typography</span>
-					</a>
-				</li>
-				 <li>
-					<a class="ajax-link" href="ajax/calendar.html">
-						 <i class="fa fa-calendar"></i>
-						 <span class="hidden-xs">Calendar</span>
-					</a>
-				 </li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle">
-						<i class="fa fa-picture-o"></i>
-						 <span class="hidden-xs">Multilevel menu</span>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a href="#">First level menu</a></li>
-						<li><a href="#">First level menu</a></li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle">
-								<i class="fa fa-plus-square"></i>
-								<span class="hidden-xs">Second level menu group</span>
-							</a>
-							<ul class="dropdown-menu">
-								<li><a href="#">Second level menu</a></li>
-								<li><a href="#">Second level menu</a></li>
-								<li class="dropdown">
-									<a href="#" class="dropdown-toggle">
-										<i class="fa fa-plus-square"></i>
-										<span class="hidden-xs">Three level menu group</span>
-									</a>
-									<ul class="dropdown-menu">
-										<li><a href="#">Three level menu</a></li>
-										<li><a href="#">Three level menu</a></li>
-										<li class="dropdown">
-											<a href="#" class="dropdown-toggle">
-												<i class="fa fa-plus-square"></i>
-												<span class="hidden-xs">Four level menu group</span>
-											</a>
-											<ul class="dropdown-menu">
-												<li><a href="#">Four level menu</a></li>
-												<li><a href="#">Four level menu</a></li>
-												<li class="dropdown">
-													<a href="#" class="dropdown-toggle">
-														<i class="fa fa-plus-square"></i>
-														<span class="hidden-xs">Five level menu group</span>
-													</a>
-													<ul class="dropdown-menu">
-														<li><a href="#">Five level menu</a></li>
-														<li><a href="#">Five level menu</a></li>
-														<li class="dropdown">
-															<a href="#" class="dropdown-toggle">
-																<i class="fa fa-plus-square"></i>
-																<span class="hidden-xs">Six level menu group</span>
-															</a>
-															<ul class="dropdown-menu">
-																<li><a href="#">Six level menu</a></li>
-																<li><a href="#">Six level menu</a></li>
-															</ul>
-														</li>
-													</ul>
-												</li>
-											</ul>
-										</li>
-										<li><a href="#">Three level menu</a></li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</li>
+<?php
+	$navbar = $self->navbar();
+	foreach($navbar['Разделы'] as $title => $items)
+	{
+		if(is_array($items))
+		{
+			$url = popval($items, 'url');
+			$icon = popval($items, 'i_class');
+			if(!$icon)
+				$icon = 'fa fa-circle-o';
+			if(count($items) == 1)
+				$items = array_pop($items);
+		}
+		else
+		{
+			$url = $items;
+			$icon = 'fa fa-circle-o';
+		}
+
+		if(is_array($items))
+		{
+			$link = Link::create('#', '')->addClass("dropdown-toggle");
+
+			$link->appendChild(Element::i()->addClass($icon));
+
+			$link->appendChild(Element::span($title)->addClass("hidden-xs"));
+
+			$link->appendChild(Element::i()->addClass("fa fa-folder-o")->addClass('pull-right'));
+
+			echo Element::li()->addClass("dropdown")
+				->nest($link)
+				->appendChild(bors_layouts_bootstrap3_dropdown::draw_dropdown([$title => $items], 1));
+		}
+		else
+		{
+			if(preg_match('/^\w+$/', $url))
+				$url = "/$url/";
+
+			echo Element::li()->nest(
+				Link::create($url, '')
+					->appendChild(Element::i()->addClass($icon))
+					->appendChild(Element::span($title)->addClass('hidden-xs'))
+			);
+		}
+	}
+?>
 			</ul>
 		</div>
 		<!--Start Content-->
 		<div id="content" class="col-xs-12 col-sm-10">
-			<div class="preloader">
-				<img src="img/devoops_getdata.gif" class="devoops-getdata" alt="preloader"/>
-			</div>
-			<div id="ajax-content"></div>
+<?php require __DIR__.'/devoops/breadcrumbs.tpl.php'; ?>
+
+<div id="dashboard-header" class="row">
+	<div class="col-xs-10 col-sm-2">
+		<h1><?= htmlspecialchars($self->page_title());?></h1>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-xs-10">
+<?= $self->body(); ?>
+	</div>
+	<div class="col-xs-2">
+<?php
+	if($self->get('object_type'))
+	{
+		$new_object_type = " imaged type-{$self->get('object_type')}";
+		$c_li_type = " class='imaged type-{$self->get('object_type')}'";
+	}
+
+	if($self->get('new_object_type'))
+	{
+		$new_object_type = " imaged type-{$self->get('new_object_type')}";
+	}
+
+	echo "<ul>";
+
+	if($self->get('search_link'))
+		echo "<li class=\"imaged type-search\"><a href=\"{$self->get('search_link')}\">Поиск</a></li>";
+	if($self->get('side_menu'))
+	{
+		foreach($self->side_menu() as $title => $list)
+		{
+			echo "<h3>".htmlspecialchars($title)."</h3>";
+			echo "<ul style=\"padding-bottom: 8px;\">";
+			foreach($list as $link)
+			{
+				if(!empty($link['url']))
+					echo "<li".(@$link['type']?" class=\"imaged type-{$link['type']}\"":"")."><a href=\"{$link['url']}\">{$link['title']}</a></li>";
+				else
+					echo "<li".(@$link['type']?" class=\"imaged type-{$link['type']}\"":"").">{$link['title']}</li>";
+			}
+			echo "</ul>";
+		}
+	}
+	elseif($self->get('admin_group_url'))
+		echo "<li class=\"imaged type-unknown\"><a href=\"{$self->admin_group_url()}\">"
+			.bors_ucfirst(bors_load_uri($self->admin_group_url())->get('nav_name'))
+			."</a></li>";
+
+	echo "</ul>";
+
+	if($self->get('admin_group_url'))
+	{
+?>
+<form style="padding: 0 0 10px 10px; margin: 0;" name="goidrm"
+	onSubmit="document.location='<?= $self->get('admin_group_url')/*'*/?>'+forms['goidrm'].elements['id'].value+'/'; return false"><?php /*"*/?>
+<input type="text" name="id" size="4" placeholder="ID"/>
+<input type="submit" class="search-submit" value="Перейти" />
+</form>
+<?php
+	}
+
+	if($self->get('search_request_url'))
+	{
+?>
+<form style="padding: 0 0 10px 10px; margin: 0;" action="<?= $self->get('search_request_url');/*"*/?>">
+<input type="text" name="q" size="15" placeholder="запрос" value="{$smarty.get.q}" /><input type="submit" class="search-submit" value="искать" />
+</form>
+<?php
+	}
+?>
+
+	</div>
+</div>
+
 		</div>
 		<!--End Content-->
 	</div>
@@ -326,11 +284,11 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 <script src="/_bors-assets/vendor/balancer/bors-3rd-themes-bootstrap-devoops/plugins/jquery-ui/jquery-ui.min.js"></script>
 
-<script src="/_bors-assets/vendor/balancer/bors-3rd-themes-bootstrap-devoops/plugins/bootstrap/bootstrap.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <!-- <script src="/_bors-assets/vendor/balancer/bors-3rd-themes-bootstrap-devoops/plugins/justified-gallery/jquery.justifiedgallery.min.js"></script> -->
 <!-- <script src="/_bors-assets/vendor/balancer/bors-3rd-themes-bootstrap-devoops/plugins/tinymce/tinymce.min.js"></script> -->
 <!-- <script src="/_bors-assets/vendor/balancer/bors-3rd-themes-bootstrap-devoops/plugins/tinymce/jquery.tinymce.min.js"></script> -->
 
-<!-- <script src="js/devoops.js"></script> -->
+<script src="/_bors-assets/vendor/balancer/bors-3rd-themes-bootstrap-devoops/js/devoops.js"></script>
 </body>
 </html>
