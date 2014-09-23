@@ -14,7 +14,7 @@
 <!--		<link href="/_bors-assets/vendor/balancer/bors-3rd-themes-bootstrap-devoops/plugins/fullcalendar/fullcalendar.css" rel="stylesheet"> -->
 <!--		<link href="/_bors-assets/vendor/balancer/bors-3rd-themes-bootstrap-devoops/plugins/xcharts/xcharts.min.css" rel="stylesheet"> -->
 <!--		<link href="/_bors-assets/vendor/balancer/bors-3rd-themes-bootstrap-devoops/plugins/select2/select2.css" rel="stylesheet"> -->
-		<link href="/_bors-assets/vendor/balancer/bors-3rd-themes-bootstrap-devoops/css/style.min.css" rel="stylesheet">
+		<link href="/_bors-assets/vendor/balancer/bors-3rd-themes-bootstrap-devoops/css/style.css" rel="stylesheet">
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
 				<script src="http://getbootstrap.com/docs-assets/js/html5shiv.js"></script>
@@ -85,12 +85,12 @@
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle account" data-toggle="dropdown">
 									<div class="avatar">
-										<img src="img/avatar.jpg" class="img-rounded" alt="avatar" />
+										<imgx src="img/avatar.jpg" class="img-rounded" alt="avatar" />
 									</div>
 									<i class="fa fa-angle-down pull-right"></i>
 									<div class="user-mini pull-right">
 										<span class="welcome">Welcome,</span>
-										<span>Jane Devoops</span>
+										<span><?= htmlspecialchars(bors()->user()->title()); ?></span>
 									</div>
 								</a>
 								<ul class="dropdown-menu">
@@ -315,10 +315,21 @@
 		</div>
 		<!--Start Content-->
 		<div id="content" class="col-xs-12 col-sm-10">
-			<div class="preloader">
-				<img src="img/devoops_getdata.gif" class="devoops-getdata" alt="preloader"/>
-			</div>
-			<div id="ajax-content"></div>
+<?php require __DIR__.'/devoops/breadcrumbs.tpl.php'; ?>
+
+<div id="dashboard-header" class="row">
+	<div class="col-xs-10 col-sm-2">
+		<h1><?= htmlspecialchars($self->page_title());?></h1>
+	</div>
+</div>
+
+
+<div class="row">
+	<div class="col-xs-12">
+<?= $self->body(); ?>
+	</div>
+</div>
+
 		</div>
 		<!--End Content-->
 	</div>
@@ -326,11 +337,11 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 <script src="/_bors-assets/vendor/balancer/bors-3rd-themes-bootstrap-devoops/plugins/jquery-ui/jquery-ui.min.js"></script>
 
-<script src="/_bors-assets/vendor/balancer/bors-3rd-themes-bootstrap-devoops/plugins/bootstrap/bootstrap.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <!-- <script src="/_bors-assets/vendor/balancer/bors-3rd-themes-bootstrap-devoops/plugins/justified-gallery/jquery.justifiedgallery.min.js"></script> -->
 <!-- <script src="/_bors-assets/vendor/balancer/bors-3rd-themes-bootstrap-devoops/plugins/tinymce/tinymce.min.js"></script> -->
 <!-- <script src="/_bors-assets/vendor/balancer/bors-3rd-themes-bootstrap-devoops/plugins/tinymce/jquery.tinymce.min.js"></script> -->
 
-<!-- <script src="js/devoops.js"></script> -->
+<script src="/_bors-assets/vendor/balancer/bors-3rd-themes-bootstrap-devoops/js/devoops.js"></script>
 </body>
 </html>
