@@ -1,0 +1,30 @@
+{
+	"name": "balancer/bors-3rd-themes-bootstrap-devoops",
+	"description": "DevOOPS Bootstrap 3 theme support for BORS© Framework",
+	"license": "MIT",
+
+	"authors": [
+		{
+			"name": "Balancer",
+			"email": "balancer@balancer.ru"
+		}
+	],
+
+	"prefer-stable": true,
+	"minimum-stability": "dev",
+
+	"require": {
+		"libra/libra-assets-installer": "*",
+        "balancer/bors-core": "*"
+	},
+
+	"type": "asset-aware",
+
+    "autoload": {
+		"classmap": ["classes/"]
+    },
+
+	"config": {
+		"public-dir": "htdocs/_bors-assets"
+	}
+}
